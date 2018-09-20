@@ -12,16 +12,29 @@ class Homepage extends StatelessWidget {
             leading: Icon(Icons.home),
             backgroundColor: Colors.green[800]),
         body: Container(
-          child: Card(
+            margin: EdgeInsets.all(10.00),
             child: Column(
               children: <Widget>[
-                Image.network(
-                    'https://flutter.io/images/homepage/header-illustration.png'),
-                Text('Belajar Flutter')
+                Row(
+                  children: <Widget>[
+                    Icon(Icons.archive),
+                    Text(
+                      'Artikel Terbaru',
+                      style: new TextStyle(fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                Card(
+                  child: Column(
+                    children: <Widget>[
+                      Image.network(
+                          'https://flutter.io/images/homepage/header-illustration.png'),
+                      Text('Belajar Flutter')
+                    ],
+                  ),
+                )
               ],
-            ),
-          ),
-        ),
+            )),
       ),
     );
   }
